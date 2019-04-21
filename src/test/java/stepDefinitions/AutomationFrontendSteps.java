@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import static org.junit.Assert.*;
 
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -32,7 +33,7 @@ public class AutomationFrontendSteps {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.mercadolibre.com.ar");
-		Thread.sleep(1000);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	};
 
 	@When("^accede a Categorias$")
@@ -43,7 +44,7 @@ public class AutomationFrontendSteps {
 		Actions action = new Actions(driver);
 		WebElement btn = driver.findElement(By.linkText("Categorías"));
 		action.moveToElement(btn).build().perform();
-		Thread.sleep(1500);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	}
 	
 	// Pasos del primer escenario
@@ -51,13 +52,13 @@ public class AutomationFrontendSteps {
 	@When("^accede a la seccion \"([^\"]*)\"$")
 	public void accede_a_la_seccion(String arg1) throws InterruptedException{
 		driver.findElement(By.linkText(arg1)).click();
-		Thread.sleep(1000);
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 	}
 
 	@When("^accede a la categoria \"([^\"]*)\"$")
 	public void accede_a_la_categoria(String arg1) throws Throwable {
 		driver.findElement(By.linkText(arg1)).click();
-		Thread.sleep(1000);
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 	}
 
 	@Then("^valido que el titulo sea igual a \"([^\"]*)\"$")
