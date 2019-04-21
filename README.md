@@ -14,7 +14,7 @@
 * Abrir la Consola de comandos de Windows y situarse sobre la raíz del proyecto.
 * Ejecutar el siguiente comando:
 
-  _java -Dfile.encoding=UTF-8 -cp "%cd%\Jars\*;%cd%\bin" cucumber.api.cli.Main --glue stepDefinitions %cd%\Feature\ -p    com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html -p pretty -m -t @TestReady_
+  _java -Dfile.encoding=UTF-8 -cp "%cd%/Jars/*;%cd%\bin" cucumber.api.cli.Main --glue stepDefinitions %cd%\Feature\ -p    com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html -p pretty -m -t @TestReady_
 
 * Una vez finalizada la ejecución, podrá encontrar el reporte en la siguiente ruta dentro del proyecto:
 
