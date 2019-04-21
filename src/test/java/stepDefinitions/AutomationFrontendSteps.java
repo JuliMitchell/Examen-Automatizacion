@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import com.cucumber.listener.Reporter;
 
@@ -35,7 +36,12 @@ public class AutomationFrontendSteps {
 
 	@When("^accede a Categorias$")
 	public void accede_a_Categorias() throws InterruptedException {
+		/*
 		driver.findElement(By.linkText("Categorías")).click();
+		*/
+		Actions action = new Actions(driver);
+		WebElement btn = driver.findElement(By.linkText("Categorías"));
+		action.moveToElement(btn).perform();
 		Thread.sleep(1000);
 	}
 	
