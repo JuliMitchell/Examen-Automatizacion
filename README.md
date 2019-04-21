@@ -1,4 +1,4 @@
-# Examen Automatizacion
+# Examen Automatización
 
 
 ### Pre-requisitos 📋
