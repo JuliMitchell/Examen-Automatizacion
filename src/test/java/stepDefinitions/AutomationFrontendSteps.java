@@ -34,7 +34,6 @@ public class AutomationFrontendSteps {
 		driver.manage().window().maximize();
 		driver.get("https://www.mercadolibre.com.ar");
 		Thread.sleep(4000);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	};
 
 	@When("^accede a Categorias$")
@@ -44,7 +43,7 @@ public class AutomationFrontendSteps {
 		*/
 		Actions action = new Actions(driver);
 		WebElement btn = driver.findElement(By.linkText("Categorías"));
-		action.moveToElement(btn);
+		action.moveToElement(btn).build().perform();
 		Thread.sleep(2000);
 		
 	}
