@@ -26,7 +26,7 @@ public class AutomationFrontendSteps {
 	
 	@Given("^el usuario entra a MercadoLibre$")
 	public void el_usuario_entra_a_MercadoLibre() {
-		String exePath = "C:\\Users\\julia\\Documents\\Automatización\\chromedriver_win32\\chromedriver.exe";
+		String exePath = "Drivers/chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		driver = new ChromeDriver();
 		driver.get("https://www.mercadolibre.com.ar");
