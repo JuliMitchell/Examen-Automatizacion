@@ -26,12 +26,13 @@ public class AutomationFrontendSteps {
 	// Pasos comunes
 	
 	@Given("^el usuario entra a MercadoLibre$")
-	public void el_usuario_entra_a_MercadoLibre() {
+	public void el_usuario_entra_a_MercadoLibre() throws InterruptedException {
 		String exePath = "Drivers/chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.mercadolibre.com.ar");
+		Thread.sleep(1000);
 	};
 
 	@When("^accede a Categorias$")
@@ -42,7 +43,7 @@ public class AutomationFrontendSteps {
 		Actions action = new Actions(driver);
 		WebElement btn = driver.findElement(By.linkText("Categorías"));
 		action.moveToElement(btn).perform();
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 	}
 	
 	// Pasos del primer escenario
@@ -50,13 +51,13 @@ public class AutomationFrontendSteps {
 	@When("^accede a la seccion \"([^\"]*)\"$")
 	public void accede_a_la_seccion(String arg1) throws InterruptedException{
 		driver.findElement(By.linkText(arg1)).click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 	}
 
 	@When("^accede a la categoria \"([^\"]*)\"$")
 	public void accede_a_la_categoria(String arg1) throws Throwable {
 		driver.findElement(By.linkText(arg1)).click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 	}
 
 	@Then("^valido que el titulo sea igual a \"([^\"]*)\"$")
