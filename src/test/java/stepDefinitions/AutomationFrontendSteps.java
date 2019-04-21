@@ -33,7 +33,7 @@ public class AutomationFrontendSteps {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.mercadolibre.com.ar");
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 	};
 
 	@When("^accede a Categorias$")
@@ -44,7 +44,7 @@ public class AutomationFrontendSteps {
 		Actions action = new Actions(driver);
 		WebElement btn = driver.findElement(By.linkText("Categorías"));
 		action.moveToElement(btn).build().perform();
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 	}
 	
 	// Pasos del primer escenario
@@ -52,13 +52,13 @@ public class AutomationFrontendSteps {
 	@When("^accede a la seccion \"([^\"]*)\"$")
 	public void accede_a_la_seccion(String arg1) throws InterruptedException{
 		driver.findElement(By.linkText(arg1)).click();
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 	}
 
 	@When("^accede a la categoria \"([^\"]*)\"$")
 	public void accede_a_la_categoria(String arg1) throws Throwable {
 		driver.findElement(By.linkText(arg1)).click();
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 	}
 
 	@Then("^valido que el titulo sea igual a \"([^\"]*)\"$")
