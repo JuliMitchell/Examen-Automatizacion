@@ -43,8 +43,9 @@ public class AutomationFrontendSteps {
 		*/
 		Actions action = new Actions(driver);
 		WebElement btn = driver.findElement(By.linkText("Categorías"));
-		action.moveToElement(btn).build().perform();
+		action.moveToElement(btn).click().build().perform();
 		Thread.sleep(2000);
+		
 	}
 	
 	// Pasos del primer escenario
