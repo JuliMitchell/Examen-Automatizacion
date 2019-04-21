@@ -34,6 +34,7 @@ public class AutomationFrontendSteps {
 		driver.manage().window().maximize();
 		driver.get("https://www.mercadolibre.com.ar");
 		Thread.sleep(4000);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	};
 
 	@When("^accede a Categorias$")
