@@ -33,7 +33,7 @@ public class AutomationFrontendSteps {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.mercadolibre.com.ar");
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 	};
 
 	@When("^accede a Categorias$")
