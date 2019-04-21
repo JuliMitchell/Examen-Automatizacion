@@ -10,8 +10,8 @@
 ### Ejecución: 🚀
 
 * Descargar el proyecto desde el repositorio. Ir a "Clone or download" y elegir la opción "Download ZIP".
-* Una vez descargado, descomprimir el .zip en una carpeta a elección.
-* Ya descomprimido, abrir la Consola de comandos de Windows y situarse sobre la raíz del proyecto.
+* Descomprimir el .zip en una carpeta a elección.
+* Abrir la Consola de comandos de Windows y situarse sobre la raíz del proyecto.
 * Ejecutar el siguiente comando:
 
   _java -Dfile.encoding=UTF-8 -cp "%cd%\Jars\*;%cd%\bin" cucumber.api.cli.Main --glue stepDefinitions %cd%\Feature\ -p    com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html -p pretty -m -t @TestReady_
