@@ -29,6 +29,7 @@ public class AutomationFrontendSteps {
 		String exePath = "Drivers/chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		driver = new ChromeDriver();
+		driver.manage().window().fullscreen();
 		driver.get("https://www.mercadolibre.com.ar");
 	};
 
