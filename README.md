@@ -1,4 +1,6 @@
-# Examen Automatización
+# Automatización - MercadoLibre
+
+Automatización de pruebas en el portal MercadoLibre utilizando Java como lenguaje de programación e incluyendo las herramientas Cucumber, Selenium WebDriver, REST Assured y ExtentReport.
 
 
 ### Pre-requisitos 📋
